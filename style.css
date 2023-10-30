@@ -1,0 +1,147 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+* {
+    font-family: 'Comfortaa', cursive;
+}
+
+:root{
+    --bg: #161616;
+    --bg2: #262626;
+    --fg: #dde1e6;
+    --fg2: #525252;
+    --bhb:#F5B1CC;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.center {
+    text-align: center;
+    margin-top: 10%;
+}
+
+h1 {
+    color: var(--fg);
+    font-size: 36px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: var(--bg2);
+}
+
+.tsb {
+    outline: none;
+    border: none;
+    background-color: var(--bg2);
+    color: var(--fg);
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    flex: 1; 
+    margin-right: 10px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: var(--bg2);
+    color: var(--fg);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+  
+#toggleButton {
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+} 
+
+#bookmarks {
+    top: 50%;
+    left: 50%;
+    display: center;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin-top: 60px;
+}
+
+#bookmarks a {
+    text-decoration: none; 
+    color: var(--fg2);
+    margin-right: 10px;
+}
+
+#bookmarks a:hover {
+    color: var(--bhb);
+}
+
+#date {
+    color: var(--fg);
+    text-align: center;
+    font-size: 25px;
+    display: center; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -180px;
+}
+
+#time {
+    color: var(--fg);
+    font-size: 120px;
+    display: center;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -100px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    #bar, .tsb{
+        width: 90%;
+    }
+
+    #date {
+        font-size: 20px;
+        margin-top: -180px;
+    }
+
+    #time {
+        font-size: 100px;
+        margin-top: -100px;
+    }
+
+    #bookmarks {
+        display: none;
+    }
+}
