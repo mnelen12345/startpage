@@ -1,22 +1,18 @@
+let date = new Date();
+
 window.onload = function() {
   updateDate();
   updateTime();
 };
 
 function updateTime() {
-  var time = new Date();
-  var hour = time.getHours();
-  var min = time.getMinutes();
+  let hour = date.getHours();
+  let min = date.getMinutes();
 
-  if (hour < 10) {
-    hour = "0" + hour;
-  }
-  if (min < 10) {
-    min = "0" + min;
-  }
+  if (hour < 10) hour = "0" + hour;
+  if (min < 10) min = "0" + min;
 
-  var currentTime = hour + ":" + min;
-  document.getElementById("time").innerHTML = currentTime;
+  document.getElementById("time").innerHTML = `${hour}:${min}`;
 
   setTimeout(updateTime, 1000);
 }
@@ -46,11 +42,5 @@ function updateDate() {
     "December"
   ];
   
-  var date = new Date();
-  var dayOfWeek = dayNames[date.getDay()];
-  var day = date.getDate();
-  var month = monthNames[date.getMonth()];
-  
-  var currentDate = dayOfWeek + ", " + day + " " + month;
-  document.getElementById("date").innerHTML = currentDate;
+  document.getElementById("date").innerHTML = `${dayNames[date.getDay()]}, ${date.getDate()} ${monthNames[date.getMonth()]}`;
 }
